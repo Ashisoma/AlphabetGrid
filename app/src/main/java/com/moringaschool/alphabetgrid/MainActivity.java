@@ -2,6 +2,7 @@ package com.moringaschool.alphabetgrid;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.widget.Adapter;
 import android.widget.ArrayAdapter;
@@ -17,13 +18,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Typeface typeface =Typeface.createFromAsset(getAssets(),"fonts/musicnet.tff");
 
-        ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, letters);
 
-//        gridView.setAdapter(adapter);
-
-        //gridView = (GridView) findViewById(R.id.grid_item_letter)
         gridView = (GridView) findViewById(R.id.baseGridView);
-        gridView.setAdapter(new AlphabetAdapter(this, letters));
+        gridView.setAdapter(new AlphabetAdapter(this, letters, typeface));
     }
 }
