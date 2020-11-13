@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Typeface typeface =Typeface.createFromAsset(getAssets(),"assets/font/musicnet.tff");
+        Typeface typeface = Typeface.createFromAsset(getAssets(),"fonts/musicnet.ttf");
 
 
         ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, letters);
